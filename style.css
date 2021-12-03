@@ -1,0 +1,39 @@
+body {
+  color: white;
+  background-color: rgb(24, 24, 24);
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: 20px;
+  display: flex;
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 8px;
+}
+.gameBoard {
+  width: 340px;
+  display: grid;
+  border-radius: 30%;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(28, 146, 201);
+}
+.gameBoard .item {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgb(24, 24, 24);
+}
+.item:hover {
+  background-color: rgba(24, 24, 24, 0.322);
+  border-radius: 1%;
+}
