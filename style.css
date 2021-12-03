@@ -1,5 +1,6 @@
 body {
   color: white;
+  margin: 0;
   background-color: rgb(24, 24, 24);
   font-family: "Fuzzy Bubbles", cursive;
   font-size: 20px;
@@ -11,8 +12,13 @@ body {
 }
 h1 {
   text-align: center;
-  font-size: 50px;
-  margin-bottom: 8px;
+  font-size: 40px;
+  margin-bottom: 3px;
+  margin-top: 6px;
+}
+.infoBody.turn {
+  text-align: center;
+  font-size: 30px;
 }
 .gameBoard {
   width: 340px;
@@ -33,6 +39,10 @@ h1 {
   align-items: center;
   cursor: pointer;
   background-color: rgb(24, 24, 24);
+}
+.infoBody.result {
+  text-align: center;
+  font-size: 30px;
 }
 .item:hover {
   background-color: rgba(24, 24, 24, 0.322);
