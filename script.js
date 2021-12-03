@@ -19,10 +19,26 @@ reset();
 
 //Reset button logic:
 document.querySelector(".reset").addEventListener("click", reset);
+
+//Select all the sub-squares:
+document.querySelectorAll(".item").forEach((item) => {
+  item.addEventListener("click", itemClick);
+});
+
+// FUNCTIONS:
+function itemClick(event) {
+  let item = event.target.getAttribute("id");
+  console.log(item);
+  if (myGameBoard[item] === "") {
+    myGameBoard[item] = player;
+    showMarker();
+  }
+}
+
 function reset() {
   warning = "";
   let random = Math.floor(Math.random() * 2);
-  player = random === 0 ? "x" : "o";
+  player = random === 0 ? "X" : "o";
 
   for (let i in myGameBoard) {
     myGameBoard[i] = "";
