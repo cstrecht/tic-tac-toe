@@ -17,7 +17,7 @@ h1 {
 .gameBoard {
   width: 340px;
   display: grid;
-  border-radius: 30%;
+  border-radius: 10%;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 15px;
@@ -28,6 +28,7 @@ h1 {
   width: 100px;
   height: 100px;
   display: flex;
+  font-size: 60px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
