@@ -101,11 +101,7 @@ function checkWinner(player) {
   for (let w in poss) {
     let pArray = poss[w].split(","); // a1, a2, a3
     let hasWon = pArray.every((option) => {
-      if (myGameBoard[option] === player) {
-        return true;
-      } else {
-        return false;
-      }
+      return myGameBoard[option] === player;
     });
     if (hasWon) {
       return true;
