@@ -32,24 +32,24 @@ function itemClick(event) {
   if (myGameBoard[item] === "") {
     myGameBoard[item] = player;
     showMarker();
+    changePlayer(); // between X and O
   }
 }
 
 function reset() {
   warning = "";
   let random = Math.floor(Math.random() * 2);
-  player = random === 0 ? "X" : "o";
+  player = random === 0 ? "x" : "o";
 
   for (let i in myGameBoard) {
     myGameBoard[i] = "";
   }
-
   playing = true;
 
   showMarker();
   showGameInfo();
 }
-//
+
 function showMarker() {
   for (let i in myGameBoard) {
     console.log("Item: ", i);
@@ -64,4 +64,13 @@ function showMarker() {
 function showGameInfo() {
   document.querySelector(".turn").innerHTML = player;
   document.querySelector(".result").innerHTML = warning;
+}
+//
+function changePlayer() {
+  if (player === "x") {
+    player = "o";
+  } else {
+    player = "x";
+  }
+  showGameInfo(); // always show/update who's playing
 }
